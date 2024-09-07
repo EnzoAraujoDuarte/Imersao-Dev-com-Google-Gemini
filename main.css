@@ -1,0 +1,227 @@
+.loader {
+  --primary-color: #E74C3C;
+  --background-color: #ECF0F1;
+  --text-color: #34495E;
+  width: 200px;
+  height: 200px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.book {
+  width: 80px;
+  height: 100px;
+  position: relative;
+  perspective: 1000px;
+  margin-bottom: 20px;
+}
+
+.book-page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transform-origin: left center;
+  transition: transform 0.5s;
+  border-radius: 0 5px 5px 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.book-page:nth-child(1) {
+  z-index: 3;
+  animation: flip1 3s infinite;
+}
+
+.book-page:nth-child(2) {
+  z-index: 2;
+  animation: flip2 3s infinite;
+}
+
+.book-page:nth-child(3) {
+  z-index: 1;
+  animation: flip3 3s infinite;
+}
+
+@keyframes flip1 {
+  0%, 100% { transform: rotateY(0deg); }
+  10%, 90% { transform: rotateY(-180deg); }
+}
+
+@keyframes flip2 {
+  0%, 100% { transform: rotateY(0deg); }
+  20%, 80% { transform: rotateY(-180deg); }
+}
+
+@keyframes flip3 {
+  0%, 100% { transform: rotateY(0deg); }
+  30%, 70% { transform: rotateY(-180deg); }
+}
+
+.loader span {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.page-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+#page-image-container {
+  text-align: center;
+}
+
+#page-content {
+  background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente para melhor legibilidade */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+body#inicial {
+  color: #333; /* Cor do texto padrão */
+}
+
+.inicial-page {
+  background-image: url('../images/Inicial.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#page-content {
+  text-align: center;
+  color: #ffffff; /* Voltando a cor do texto para branco */
+  background-color: rgba(0, 0, 0, 0.5); /* Voltando o fundo para semi-transparente preto */
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 80%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff; /* Voltando a cor do título para branco */
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #ffffff; /* Voltando a cor do texto para branco */
+}
+
+#explore-button {
+  background-color: #3498DB; /* Cor do botão alterada para um azul mais claro */
+  color: #ffffff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#explore-button:hover {
+  background-color: #2980B9; /* Cor do botão ao passar o mouse */
+}
+
+/* Outros estilos... */
+
+.inicial-page #page-content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.inicial-page h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.inicial-page p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+.inspirational-text {
+  text-align: left;
+  margin-bottom: 2rem;
+  font-style: italic;
+  color: #f0f0f0;
+}
+
+.inspirational-text p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+#explore-button {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  background-color: #E74C3C;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#explore-button:hover {
+  background-color: #C0392B;
+  transform: scale(1.05);
+}
+
+.arche-library {
+    font-family: 'Playfair Display', serif; /* Uma fonte mais elegante */
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #f5f5f5; /* Alterado de #3498DB para #f5f5f5 */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    letter-spacing: 1px;
+    display: inline-block;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.arche-library:hover {
+    transform: scale(1.1);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+/* Ajuste o tamanho da fonte para o h1 */
+.inicial-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+/* Ajuste o tamanho da fonte para o texto inspirador */
+.inspirational-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* ... (outros estilos existentes) ... */
