@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/onsale.css">
+    <title>Promoções - Arché</title>
+    <link rel="icon" type="image/png" href="../images/logo.png">
+</head>
+<body class="onsale-page">
+    <header>
+        <!-- Copie o header do index.html aqui -->
+        <div class="info-icon" id="infoIcon">?</div>
+    </header>
+    
+    <main>
+        <button id="voltar-button" onclick="window.location.href='index.html'">Voltar</button>
+
+        <section class="onsale-hero">
+            <img src="../images/onsale.png" alt="Promoções" class="onsale-image">
+            <h1>Promoções Imperdíveis</h1>
+        </section>
+
+        <section id="promocoes-grid" class="promocoes-grid">
+            <!-- Os livros em promoção serão carregados aqui dinamicamente -->
+        </section>
+
+        <button id="load-more" class="load-more-button">Ver mais</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Arché - Livraria Online. Todos os direitos reservados</p>
+    </footer>
+
+    <div id="infoTooltip" class="info-tooltip">
+        Nossa seção "Promoções" está sendo aprimorada. Futuramente, ela funcionará como um comparador de preços, permitindo que os usuários encontrem as melhores ofertas de livros e materiais de leitura em diversos sites. O objetivo é facilitar o acesso a experiências de leitura desejadas, oferecendo opções que se adequem às preferências e ao orçamento de cada usuário.
+    </div>
+
+    <script type="module" src="../scripts/onsale.js"></script>
+</body>
+</html>
+
+

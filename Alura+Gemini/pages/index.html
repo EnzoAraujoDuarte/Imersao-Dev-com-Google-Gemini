@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arché - Biblioteca Online</title>
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <!-- Adicione esta linha para o favicon -->
+    <link rel="icon" type="image/png" href="../images/logo.png">
+</head>
+<body class="index-page">
+    <header>
+        <div class="logo">
+            <img src="../images/logo.png" alt="Arché Logo" id="site-logo">
+        </div>
+        <div class="searchBox">
+            <input class="searchInput" type="text" id="termo-pesquisa" placeholder="Pesquisar...">
+            <button class="searchButton" aria-label="Pesquisar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 29 29" fill="none">
+                    <g clip-path="url(#clip0_2_17)">
+                        <g filter="url(#filter0_d_2_17)">
+                            <path d="M23.7953 23.9182L19.0585 19.1814M19.0585 19.1814C19.8188 18.4211 20.4219 17.5185 20.8333 16.5251C21.2448 15.5318 21.4566 14.4671 21.4566 13.3919C21.4566 12.3167 21.2448 11.252 20.8333 10.2587C20.4219 9.2653 19.8188 8.36271 19.0585 7.60242C18.2982 6.84214 17.3956 6.23905 16.4022 5.82759C15.4089 5.41612 14.3442 5.20435 13.269 5.20435C12.1938 5.20435 11.1291 5.41612 10.1358 5.82759C9.1424 6.23905 8.23981 6.84214 7.47953 7.60242C5.94407 9.13789 5.08145 11.2204 5.08145 13.3919C5.08145 15.5634 5.94407 17.6459 7.47953 19.1814C9.01499 20.7168 11.0975 21.5794 13.269 21.5794C15.4405 21.5794 17.523 20.7168 19.0585 19.1814Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" shape-rendering="crispEdges"></path>
+                        </g>
+                    </g>
+                    <defs>
+                        <filter id="filter0_d_2_17" x="-0.418549" y="3.70435" width="29.7139" height="29.7139" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
+                            <feOffset dy="4"></feOffset>
+                            <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+                            <feComposite in2="hardAlpha" operator="out"></feComposite>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_17"></feBlend>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_17" result="shape"></feBlend>
+                        </filter>
+                        <clipPath id="clip0_2_17">
+                            <rect width="28.0702" height="28.0702" fill="white" transform="translate(0.403503 0.526367)"></rect>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </button>
+        </div>
+        <button class="menu-toggle" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="inicial.html">Início</a></li>
+                <li class="dropdown">
+                    <a href="#categories">Categorias</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#" data-categoria="ciencia">Ciência</a></li>
+                        <li><a href="#" data-categoria="tecnologia">Tecnologia</a></li>
+                        <li><a href="#" data-categoria="literatura">Literatura</a></li>
+                        <li><a href="#" data-categoria="historia-geografia">História e Geografia</a></li>
+                        <li><a href="#" data-categoria="ciencias-sociais">Ciências Sociais</a></li>
+                        <li><a href="#" data-categoria="religiao">Religião</a></li>
+                        <li><a href="#" data-categoria="filosofia-psicologia">Filosofia e Psicologia</a></li>
+                        <li><a href="#" data-categoria="lingua">Língua</a></li>
+                        <li><a href="#" data-categoria="romantico">Romântico</a></li>
+                    </ul>
+                </li>
+                <li><a href="bestsellers.html">Bestsellers</a></li>
+                <li><a href="onsale.html">Promoções</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-text">
+                <h1>Encontre sua próxima leitura</h1>
+                <p>Explore nossa vasta coleção</p>
+            </div>
+        </section>
+        
+        <section id="bestsellers" class="bestsellers-section">
+            <h2>Tendências</h2>
+            <div class="carousel-container">
+                <button class="carousel-button carousel-button-prev">&lt;</button>
+                <div class="carousel-track-container">
+                    <div class="carousel-track">
+                        <!-- Os livros serão carregados aqui dinamicamente -->
+                    </div>
+                </div>
+                <button class="carousel-button carousel-button-next">&gt;</button>
+            </div>
+        </section>
+
+        <section id="resultados-pesquisa">
+            <!-- Os resultados da pesquisa serão exibidos aqui -->
+        </section>
+
+        <section id="comparativo-precos">
+            <!-- O comparativo de preços será exibido aqui -->
+        </section>
+
+        <section id="ofertas" class="ofertas-section">
+            <!-- As ofertas serão carregadas aqui dinamicamente -->
+        </section>
+
+        <section id="categoria-grid" class="categoria-grid" style="display: none;">
+            <!-- Os livros da categoria serão carregados aqui dinamicamente -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Arché Library - Biblioteca Online. Todos os direitos reservados</p>
+    </footer>
+    <script type="module" src="../scripts/index.js"></script>
+</body>
+</html>
